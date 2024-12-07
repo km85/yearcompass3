@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Year Compass</title>
+  <!-- Add Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add print-specific styles -->
+  <style>
+    @media print {
+      @page {
+        margin: 2cm;
+      }
+      .answer {
+        border: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen p-8">
+  <div class="max-w-4xl mx-auto">
+    <!-- Content container -->
+    <div class="space-y-8 print:space-y-6">
+      <!-- Your content sections here -->
+      <div class="print:break-before-page">
+        <!-- Each section of your content -->
+         <div class="text-center">
+            <h1 class="text-2xl font-bold">Year Compass</h1>
+            <p class="text-sm text-gray-500">A guide to understanding your year</p>
+            <p class="text-sm text-gray-500">by Malik</p>
+         </div>
+         <div class="flex flex-row flex-wrap">
+            <div class="pt-10 w-1/2 pr-4">
+                <div class="font-medium mb-2">What are you most grateful for?</div>
+                <input type="text" class="answer p-2 border rounded-md" placeholder="Your answer...">
+            </div>
+            <div class="pt-10 w-1/2 pl-4">
+                <div class="font-medium mb-2">What is the best thing you have discovered about yourself?</div>
+                <input type="text" class="w-full p-2 border rounded-md" placeholder="Your answer...">
+            </div>
+            <div class="pt-10 w-1/2 pr-4">
+                <div class="font-medium mb-2">What were you not able to accomplish?</div>
+                <input type="text" class="w-full p-2 border rounded-md" placeholder="Your answer...">
+            </div>
+            <div class="pt-10 w-1/2 pl-4">
+                <div class="font-medium mb-2">Who are the three people you influenced the most?</div>
+                <input type="text" class="w-full p-2 border rounded-md" placeholder="Your answer...">
+            </div>
+            <div class="pt-10 w-1/2 pr-4">
+                <div class="font-medium mb-2">Who are the three people who influenced you the most?</div>
+                <input type="text" class="w-full p-2 border rounded-md" placeholder="Your answer...">
+            </div>
+            <div class="pt-10 w-1/2 pl-4">
+                <div class="font-medium mb-2">What are you most proud of?</div>
+                <input type="text" class="w-full p-2 border rounded-md" placeholder="Your answer...">
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Print button -->
+    <button id="print-btn" class="fixed bottom-8 right-8 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors no-print">
+      Print Document
+    </button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
